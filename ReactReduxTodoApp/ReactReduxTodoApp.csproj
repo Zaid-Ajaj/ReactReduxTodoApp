@@ -68,6 +68,7 @@
     <Compile Include="Models\TodoVisibility.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reducers\Todos.cs" />
+    <Compile Include="LocalStorage.cs" />
     <Compile Include="UI\Styles.cs" />
     <Compile Include="UI\Components.cs" />
   </ItemGroup>

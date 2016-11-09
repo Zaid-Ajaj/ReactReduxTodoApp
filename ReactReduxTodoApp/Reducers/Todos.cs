@@ -10,8 +10,12 @@ namespace ReactReduxTodoApp.Reducers
     {
         private static TodoAppState AddTodo(TodoAppState state, AddTodo act)
         {
-            var maxId = state.Todos.Max(_todo => _todo.Id);
-            var nextId = maxId + 1;
+            int nextId = 0;
+            if (state.Todos.Any())
+            {
+                var maxId = state.Todos.Max(_todo => _todo.Id);
+                nextId = maxId + 1;
+            }
 
             var todo = new Todo
             {
