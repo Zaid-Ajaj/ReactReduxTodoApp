@@ -110,7 +110,7 @@ namespace ReactReduxTodoApp.Reducers
             };
         }
 
-        public static ReduxReducer<TodoAppState> Reducer(TodoAppState iniital) => 
+        public static ReduxReducer<TodoAppState> Reducer(TodoAppState initialState) => 
                 BuildReducer.For<TodoAppState>()
                             .WhenActionHasType<AddTodo>(AddTodo)
                             .WhenActionHasType<DeleteTodo>(DeleteTodo)
@@ -118,7 +118,7 @@ namespace ReactReduxTodoApp.Reducers
                             .WhenActionHasType<ToggleTodoCompleted>(ToggleTodoCompleted)
                             .WhenActionHasType<SetVisibility>(SetVisibility)
                             .WhenActionHasType<UpdateDescriptionInput>(UpdateDescriptionInput)
-                            .WhenStateIsUndefinedOrNull(() => iniital)  
+                            .WhenStateIsUndefinedOrNull(() => initialState)  
                             .Build();
     }
 }

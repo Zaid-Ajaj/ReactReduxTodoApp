@@ -1,12 +1,13 @@
 ﻿using Bridge.Html5;
 using Bridge.React;
 using Bridge.Redux;
+
 using ReactReduxTodoApp.Models;
 using ReactReduxTodoApp.Reducers;
 using ReactReduxTodoApp.UI;
 using ReactReduxTodoApp.Persistence;
-
 using ReactReduxTodoApp.Actions;
+
 using Bridge;
 using System.Linq;
 using System;
