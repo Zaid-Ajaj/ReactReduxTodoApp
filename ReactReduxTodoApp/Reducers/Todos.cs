@@ -27,7 +27,8 @@ namespace ReactReduxTodoApp.Reducers
             return new TodoAppState
             {
                 Todos = state.Todos.Concat(new Todo[] { todo }),
-                Visibility = state.Visibility
+                Visibility = state.Visibility,
+                DescriptionInput = state.DescriptionInput
             };
         }
 
@@ -35,7 +36,8 @@ namespace ReactReduxTodoApp.Reducers
         static TodoAppState DeleteTodo(TodoAppState state, DeleteTodo act) => new TodoAppState
         {
             Todos = state.Todos.Where(todo => todo.Id != act.Id),
-            Visibility = state.Visibility
+            Visibility = state.Visibility,
+            DescriptionInput = state.DescriptionInput
         };
 
 
@@ -58,7 +60,9 @@ namespace ReactReduxTodoApp.Reducers
                 }
             }),
 
-            Visibility = state.Visibility
+            Visibility = state.Visibility,
+
+            DescriptionInput = state.DescriptionInput
         };
 
 
@@ -101,7 +105,8 @@ namespace ReactReduxTodoApp.Reducers
             return new TodoAppState
             {
                 Todos = state.Todos,
-                Visibility = act.Visibility
+                Visibility = act.Visibility,
+                DescriptionInput = state.DescriptionInput
             };
         }
 

@@ -76,7 +76,7 @@ namespace ReactReduxTodoApp.UI
                                 {
                                     Style = new ReactStyle { Margin = "5px", MaxWidth = 400 },
                                     ClassName = "form-control",
-                                    Placeholder = "Todo descriptions",
+                                    Placeholder = "Todo description",
                                     OnInput = e => appStore.Dispatch(new UpdateDescriptionInput { Description = e.CurrentTarget.Value }),
                                     Value = appState.DescriptionInput
                                 }),
